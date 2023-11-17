@@ -1,0 +1,39 @@
+fulk1:
+			residual_capacity.set_weight(current_node, next_node, residual_capacity.get_weight(current_node, next_node) - new_flow);
+			residual_capacity.set_weight(next_node, current_node, residual_capacity.get_weight(current_node, next_node) + new_flow);
+
+Ford-Fulkerson on test1.csv:
+Max flow is 200
+
+Ford-Fulkerson on test2.csv:
+Max flow is 200
+
+Ford-Fulkerson on test3.csv:
+Max flow is 20
+
+Ford-Fulkerson on test4.csv:
+Max flow is 22
+
+Ford-Fulkerson on test5.csv:
+Max flow is 300
+
+fulk2:
+			residual_capacity.set_weight(current_node, next_node, (capacity->get_weight(current_node, next_node) - flow.get_weight(current_node, next_node)));
+			residual_capacity.set_weight(next_node, current_node, (capacity->get_weight(next_node, current_node) - flow.get_weight(next_node, current_node)));
+
+**TESTING FORD-FULKERSON**
+
+Ford-Fulkerson on test1.csv:
+Max flow is 200
+
+Ford-Fulkerson on test2.csv:
+Max flow is 199
+
+Ford-Fulkerson on test3.csv:
+Max flow is 20
+
+Ford-Fulkerson on test4.csv:
+Max flow is 22
+
+Ford-Fulkerson on test5.csv:
+Max flow is 300
